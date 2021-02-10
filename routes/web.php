@@ -13,6 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Replace regular routes to be controlled with controller
+
+
+ Route::get('/', 'PagesController@index');
+ Route::get('/about', 'PagesController@about');
+ Route::get('/services', 'PagesController@services');
+
+// Route::get('/about', function () {
+//     return view('pages.about');
+// });
+
+
+// dynamic url
+// Route::get('/uers/{id}', function ($id) {
+//     return 'This is user '.$id;
+// });
+
+// dynamic url
+// Route::get('/uers/{id}/{name}', function ($id) {
+//     return 'This is user '.$name ' with an id '.$id;
+// });
