@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', PagesController::class);
+// Route::get('/about', 'PagesController@index'); does not work, but about page works -- may have to do with __invoke but prior attempts, before invoke, found no controller
+Route::get('/about', 'PagesController@about');
+Route::get('/services', 'PagesController@services');
 //Replace regular routes to be controlled with controller
 
 
- Route::get('/', 'PagesController@index');
- Route::get('/about', 'PagesController@about');
- Route::get('/services', 'PagesController@services');
 
 // Route::get('/about', function () {
 //     return view('pages.about');

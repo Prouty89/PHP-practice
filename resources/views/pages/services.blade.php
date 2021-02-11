@@ -7,7 +7,7 @@
     </head>
     
     <body> 
-        <h1>About</h1>
+        <h1>Services</h1>
         <p>HELLO</p>
     </body>
 </html>
