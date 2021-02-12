@@ -3,6 +3,9 @@ body {
     font: 1rem/1.5 var(--bs-font-sans-serif);
     background-color: red;
   }
+h1{
+  font-size: 10px;
+}
   a {
     color: var(--bs-blue);
   }

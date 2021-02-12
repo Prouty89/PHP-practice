@@ -14,14 +14,21 @@ class PagesController extends Controller
      */
     public function __invoke()
     {
-        return view('pages.index');
+        $title = 'Welcome to Laravel';
+        // return view('pages.index', compact('title')); this or
+        return view('pages.index')->with('title', $title); // this, which is better when passing multiple variables.
     }
     public function about()
     {
-        return view('pages.about');
+        $title = 'About Us';
+        return view('pages.about')->with('title', $title);
     }
     public function services()
     {
-        return view('pages.services');
+        $data = array(
+            'title' => 'Services',
+            'services' => ['Web Design', 'Programming', 'SEO' ]
+        );
+        return view('pages.services')->with($data);
     }
 }
